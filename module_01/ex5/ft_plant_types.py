@@ -9,11 +9,11 @@ class Plant:
         self._age_days = 0
 
         if height < 0:
-            print("{self.name}: Error, height can't be negative")
+            print(f"{self.name}: Error, height can't be negative")
         else:
             self._height = height
         if age_days < 0:
-            print("{self.name}: Error, age can't be negative")
+            print(f"{self.name}: Error, age can't be negative")
         else:
             self._age_days = age_days
 
