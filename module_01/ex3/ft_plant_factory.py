@@ -15,11 +15,11 @@ class Plant:
 
 
 def main() -> None:
-    rose = Plant("Rose", 25, 30)
-    oak = Plant("Oak", 200, 365)
-    cactus = Plant("Cactus", 5, 90)
-    sunflower = Plant("Sunflower", 80, 45)
-    fern = Plant("Fern", 15, 120)
+    rose = Plant("Rose", 25.0, 30)
+    oak = Plant("Oak", 200.0, 365)
+    cactus = Plant("Cactus", 5.0, 90)
+    sunflower = Plant("Sunflower", 80.0, 45)
+    fern = Plant("Fern", 15.0, 120)
     garden = [rose, oak, cactus, sunflower, fern]
     print("=== Plant Factory Output ===")
     for plant in garden:

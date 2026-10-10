@@ -131,6 +131,7 @@ class Tree(Plant):
             print(f" {self._shade_calls} shade")
 
     _trunk_diameter: float
+    _stats: TreeStats
 
     def __init__(self, name: str, height: float,
                  age_days: int, trunk_diameter: float) -> None:
@@ -193,6 +194,7 @@ class Seed(Flower):
     def show(self) -> None:
         super().show()
         print(f" Seeds: {self._seeds}")
+
 
 def main() -> None:
     print("=== Garden statistics ===\n"
