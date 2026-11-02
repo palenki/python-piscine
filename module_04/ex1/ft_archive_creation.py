@@ -62,7 +62,7 @@ def save_file(save_filename: str, content: str) -> None:
 
 def main() -> None:
     if len(sys.argv) != 2:
-        print("Usage: ft_ancient_text.py <file>")
+        print("Usage: ft_archive_creation.py <file>")
         return
 
     filename: str = sys.argv[1]
