@@ -180,11 +180,11 @@ class DataStream:
 
 def main() -> None:
     print("=== Code Nexus - Data Pipeline ===")
-    print("Initialize Data Stream...")
+    print("\nInitialize Data Stream...\n")
     stream = DataStream()
     stream.print_processors_stats()
 
-    print("Registering Processors")
+    print("\nRegistering Processors\n")
     stream.register_processor(NumericProcessor())
     stream.register_processor(TextProcessor())
     stream.register_processor(LogProcessor())
@@ -208,11 +208,14 @@ def main() -> None:
 
     print(f"Send first batch of data on stream: {batch1}")
     stream.process_stream(batch1)
+    print()
     stream.print_processors_stats()
 
-    print("Send 3 processed data from each processor to a CSV plugin:")
+    print("\nSend 3 processed data from each processor to a CSV plugin:")
     stream.output_pipeline(3, CSVPlugin())
+    print()
     stream.print_processors_stats()
+    print()
 
     batch2: list[Any] = [
         21,
@@ -229,11 +232,14 @@ def main() -> None:
     ]
 
     print(f"Send another batch of data: {batch2}")
+    print()
     stream.process_stream(batch2)
     stream.print_processors_stats()
+    print()
 
     print("Send 5 processed data from each processor to a JSON plugin:")
     stream.output_pipeline(5, JSONPlugin())
+    print()
     stream.print_processors_stats()
 
 
